@@ -1,3 +1,43 @@
+/* For small mobile devices */
+
+@media (max-width: 768px) {
+    body {
+        background-size:0%;
+    }
+    .container {
+        margin-top: 40%;
+    }
+    .container .Title {
+       font-size: 30vw;
+       margin-bottom: 4%; 
+    }
+    .container .Btn {
+        font-size: 6vw;
+        margin: 0% 0% 6%;
+    }
+}
+
+/* For large mobile devices */
+
+@media (max-width: 992px) {
+    body {
+        background-size:0%;
+    }
+    .container {
+        margin-top: 20%;
+    }
+    .container .Title {
+       font-size: 30vw;
+       margin-bottom: 4%; 
+    }
+    .container .Btn {
+        font-size: 6vw;
+        margin: 0% 0% 6%;
+    }
+}
+
+/* For desktop and large screens */
+
 body {
     background-image: url("wallpaper.jpg");
     background-size: cover;
@@ -9,7 +49,7 @@ body {
 }
 
 .gearIcon {
-    width: 10vw;
+    width: 8vw;
     margin-top: 5%;
     margin-left: 80%;
 }
@@ -21,9 +61,9 @@ figcaption {
 }
 
 .Title {
-    font-size: 20vw;
+    font-size: 18vw;
     color: rgb(54, 54, 54);
-    margin-bottom: -2%;
+    margin-bottom: -3%;
     text-shadow: 10px 10px 4px gray ;
     -webkit-text-stroke-width: .6vw;
     -webkit-text-stroke-color: #fba779;
@@ -32,8 +72,8 @@ figcaption {
 }
 
 .Btn {
-    font-size: 3vw;
-    margin: 0% 0% 3%;
+    font-size: 2.5vw;
+    margin: 0% 0% 2%;
 }
 
 footer {
