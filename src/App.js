@@ -8,7 +8,7 @@ function App() {
           borderBottom: 'solid 1px',
           paddingBottom: '1rem',
         }}>
-        <Link to='/'>Home</Link> | <Link to='/instructions'>Instructions</Link> | <Link to='/about'>About</Link>
+        <Link to='/' id="home-link">Home</Link> | <Link to='/instructions' id="instructions-link">Instructions</Link> | <Link to='/about' id="about-link">About</Link>
       </nav>
       <Outlet />
     </div>
