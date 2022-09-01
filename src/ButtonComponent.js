@@ -1,26 +1,26 @@
 import React from 'react';
 
-// export default function ButtonComponent(props) {
-//     const myButton = `button ${props.type}`
-
-//     return(
-//         <button className={myButton} onClick={props.handleClick}>{props.children}</button>
-//     )
-// }
-
 export default function ButtonComponent({
+    onClick,
     width,
     height,
     backgroundColor,
     color,
-    border,
+    borderRadius,
     fontSize,
     children,
     margin,
 }) {
   return (
-    <button style={{width, height, backgroundColor, color, border, fontSize, margin}}>
+    <button onClick={onClick} style={{width, height, backgroundColor, color, borderRadius, fontSize, margin}}>
         {children}
       </button>
   );
 }
+
+// export default function ButtonComponent(props) {
+
+//     return(
+//         <button className='button' onClick={props.handleClick}>{props.children}</button>
+//     )
+// }
