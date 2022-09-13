@@ -17,6 +17,7 @@ const Card = ({ cardCode }) => {
     console.log("value", value)
     console.log("suit", suit)
 
+    
     return(
         <>
         {isShowing ? (
