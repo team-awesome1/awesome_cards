@@ -15,17 +15,23 @@ class Deck {
             const j = Math.floor(Math.random() * (i + 1));
             [deck[i], deck[j]] = [deck[j], deck[i]];
         }
+        console.log("Test");
         this.shuffled = true;
         return deck;
         //source: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
     }
 
-    draw() {
-        if (!this.deck.length) {
+    deal() {
+        const hands = [this.deck.slice(0, 26), this.deck.slice(26, 52)]
+        this.remaining = 0
+        return hands
+    }
+
+    draw(hand) {
+        if (!hand.length) {
             throw new RangeError("There are no more cards in the deck! Create a new deck instance or reset current.");
         }
-        const card = this.deck.pop();
-        this.remaining = this.deck.length--;
+        const card = hand.pop();
         return card
     }
 
