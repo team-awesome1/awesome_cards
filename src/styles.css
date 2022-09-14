@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(169, 169, 169);
+    font-family: sans-serif;
+}
+
+#card-container {
+    position: relative;
+    height: 3.75in;
+}
+
+.card {
+    position: absolute;
+}
+
+.value {
+    top: 0px;
+    left: 15px;
+}
+
+.suit {
+    top: 105px;
+    left: 25px;
+}
+
+.black {
+    filter: grayscale(100%);
+    filter: brightness(0.0);
+}
+
+.red {
+    filter: grayscale(0%);
+}
