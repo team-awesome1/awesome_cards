@@ -1,10 +1,10 @@
-import { Outlet, Link } from 'react-router-dom';
-import Homepage from './Homepage'
+import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
     <div className='App'>
-      <Homepage />
+      {/* a nav bar can safely go here */}
+      <Outlet />
     </div>
   );
 }
