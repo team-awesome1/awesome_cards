@@ -1,82 +1,96 @@
-/* For small mobile devices */
-
-@media (max-width: 768px) {
+/* for small mobile devices */
+ 
+@media (min-width: 280px) {
     body {
-        background-size:0%;
+        background-image: url("wallpaper.jpg");
+        background-size: 200%;
     }
-    .container {
-        margin-top: 40%;
+    .Homepage {
+        font-family: "Luckiest Guy";
+        text-align: center;
+        position: relative;
+        min-height: 100vh;
     }
-    .container .Title {
-       font-size: 30vw;
-       margin-bottom: 4%; 
+    .gearIcon {
+        width: 12vw;
+        margin-top: 10%;
+        margin-left: 80%;
     }
-    .container .Btn {
-        font-size: 6vw;
-        margin: 0% 0% 6%;
+    figcaption {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 8px;
+        margin-left: 80%;
+    }
+    .Title {
+        font-size: 36vw;
+        color: rgb(54, 54, 54);
+        margin-top: 20%;
+        margin-bottom: -3%;
+        text-shadow: 10px 10px 4px gray ;
+        -webkit-text-stroke-width: 1.2vw;
+        -webkit-text-stroke-color: #fba779;
+        transform: rotate(-6deg);
+        letter-spacing: -4px;
+    }
+    .Btn {
+        font-size: 8vw;
+        margin: 0% 0% 4%;
+    }
+    
+    footer {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px; 
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
     }
 }
 
-/* For large mobile devices */
+/* For large mobile devices and tablets */
 
-@media (max-width: 992px) {
+@media (min-width: 540px) {
     body {
-        background-size:0%;
+        background-size: cover;
     }
-    .container {
+    .gearIcon {
+        width: 8vw;
+        margin-top: 10%;
+        margin-left: 80%;
+    }
+
+    .Title {
+        font-size: 28vw;
+        -webkit-text-stroke-width: .6vw;
         margin-top: 20%;
     }
-    .container .Title {
-       font-size: 30vw;
-       margin-bottom: 4%; 
-    }
-    .container .Btn {
+
+    .Btn {
         font-size: 6vw;
-        margin: 0% 0% 6%;
+        margin: 0% 0% 2%;
     }
 }
 
-/* For desktop and large screens */
+/* For desktops and extra large tablets */
 
-body {
-    background-image: url("wallpaper.jpg");
-    background-size: cover;
-}
+@media (min-width: 1024px) {
+    .gearIcon {
+        width: 6vw;
+        margin-top: 4%;
+        margin-left: 86%;
+    }
 
-.Homepage {
-    font-family: "Luckiest Guy";
-    text-align: center;
-}
+    figcaption {
+        margin-left: 86%;
+    }
 
-.gearIcon {
-    width: 8vw;
-    margin-top: 5%;
-    margin-left: 80%;
-}
-
-figcaption {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 8px;
-    margin-left: 80%;
-}
-
-.Title {
-    font-size: 18vw;
-    color: rgb(54, 54, 54);
-    margin-bottom: -3%;
-    text-shadow: 10px 10px 4px gray ;
-    -webkit-text-stroke-width: .6vw;
-    -webkit-text-stroke-color: #fba779;
-    transform: rotate(-6deg);
-    letter-spacing: -4px;
-}
-
-.Btn {
-    font-size: 2.5vw;
-    margin: 0% 0% 2%;
-}
-
-footer {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;  
+    .Title {
+        font-size: 18vw;
+        -webkit-text-stroke-width: .4vw;
+        margin-top: 4%;
+    }
+    .Btn {
+        font-size: 3vw;
+        margin: 0% 0% 2%;
+    }
 }
