@@ -1,0 +1,34 @@
+.Navbar {
+    height: 70px;
+    width: 100vw;
+    background-color: #a9d7d2;
+    padding: 1rem;
+    justify-content: flex-end;
+}
+
+.NavLinks {
+    list-style: none;
+    position: relative;
+    display: flex;    
+}
+
+.NavLinks a {
+    display: block;
+    width: 100%;
+    color: #b3b7da;
+    font-family: "Luckiest Guy";
+    font-size: 1.3rem;
+    text-decoration: none;
+    line-height: 40px;
+    text-align: center;
+    margin: 2px;
+    padding: 2px;
+}
+
+.NavLinks a.active {
+    color:#ff7c9c;
+}
+
+.NavLinks a:hover {
+    font-size: 2rem;        
+}

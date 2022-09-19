@@ -1,9 +1,10 @@
 import { Outlet } from 'react-router-dom';
+import Navbar from './Navbar';
 
 function App() {
   return (
     <div className='App'>
-      {/* a nav bar can safely go here */}
+      <Navbar />
       <Outlet />
     </div>
   );
