@@ -39,8 +39,8 @@ export default function Instructions() {
           <p>Sounds easy, right? But don't get too confident! After all, you may win a few battles, but can you win the War?
           </p>
         </div>
-        <a href="#" id="play">Play Now</a>
-        <a href="#" id="home">Back to Home</a>
+        <a href="/play-now" id="play">Play Now</a>
+        <a href="/" id="home">Back to Home</a>
       </div>
     </main>
   );
