@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Homepage.css';
+import Card from './Card';
 
 const Homepage = () => {
   return (
     <div className='Homepage'>
+      <Card cardCode="2S" />
+      <Card cardCode="4H" />
       <div className='OptionsGear'>
         {/* <OptionsGear /> */}
         {/* OptionsGear Component goes here; does not exist yet--see placeholder below */}
