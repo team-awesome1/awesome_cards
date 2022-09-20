@@ -21,15 +21,15 @@ const Card = ({ cardCode }) => {
     return(
         <>
         {isShowing ? (
-            <div className="card-container">
-                <img className="card" src={blank_card} alt="" />
-                <img className="card value black" src={IMAGES[value]} alt="" />
-                <img className="card suit" src={IMAGES[suit]} alt="" />
+            <div className="game-card-container">
+                <img className="game-card" src={blank_card} alt="" />
+                <img className="game-card value" src={IMAGES[value]} alt="" />
+                <img className="game-card suit" src={IMAGES[suit]} alt="" />
             </div>
             ) : (
-            <div className="card-container">
-                <img className="card" src={blank_card} alt="" />
-                <img className="card" src={IMAGES["back"]} alt="" />
+            <div className="game-card-container">
+                <img className="game-card" src={blank_card} alt="" />
+                <img className="game-card" src={IMAGES["back"]} alt="" />
             </div>
             )
         }
