@@ -41,3 +41,5 @@ class Deck {
         this.remaining = this.deck.length;
     }
 }
+
+export default Deck;
