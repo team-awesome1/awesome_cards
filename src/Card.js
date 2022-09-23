@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import blank_card from './svg/blank_card.svg';
 import IMAGES from './images.js';
 import './styles.css';
@@ -22,21 +22,21 @@ const Card = ({ cardCode }) => {
         color = "black";
     }
 
-    return(
+    return (
         <>
-        {isShowing ? (
-            <div className="game-card-container">
-                <img className="game-card" src={blank_card} alt="" />
-                <img className={`game-card value ${(color === "red") ? "card-red" : "card-black"}`} src={IMAGES[value + "_" + `${color}`]} alt="" />
-                <img className="game-card suit" src={IMAGES[suit]} alt="" />
-            </div>
+            {isShowing ? (
+                <div className="game-card-container">
+                    <img className="game-card" src={blank_card} alt="" />
+                    <img className={`game-card value ${(color === "red") ? "card-red" : "card-black"}`} src={IMAGES[value + "_" + `${color}`]} alt="" />
+                    <img className="game-card suit" src={IMAGES[suit]} alt="" />
+                </div>
             ) : (
-            <div className="game-card-container">
-                <img className="game-card" src={blank_card} alt="" />
-                <img className="game-card" src={IMAGES["back"]} alt="" />
-            </div>
+                <div className="game-card-container">
+                    <img className="game-card" src={blank_card} alt="" />
+                    <img className="game-card" src={IMAGES["back"]} alt="" />
+                </div>
             )
-        }
+            }
         </>
     )
 }

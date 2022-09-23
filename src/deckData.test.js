@@ -1,4 +1,4 @@
-//Need to import deck
+import Deck from './deckData'
 let deck;
 let hand;
 function setUp() {
@@ -6,9 +6,8 @@ function setUp() {
     hand = ['QD', '7D', '9D', '6S', 'KD', '9S', 'JC', 'QH', 'JD', 'AH', 'KH', '8D']
 }
 
-
 beforeAll(setUp);
-afterEach(deck = new Deck())
+afterEach(setUp)
 
 describe("Tests deck class and methods", function () {
     test("initial set-up", function () {
@@ -16,7 +15,7 @@ describe("Tests deck class and methods", function () {
         expect(deck.shuffled).toEqual(false);
         expect(deck.deck.length).toEqual(52);
         expect(deck.cards.length).toEqual(52);
-        expect(deck.deck).not.toEqual(deck.cards); //ensures they aren't the same array in memory
+        expect(deck.deck).not.toBe(deck.cards); //ensures they aren't the same array in memory
     })
     test("deal method", function () {
         let hand;
@@ -36,8 +35,8 @@ describe("Tests deck class and methods", function () {
     test("shuffle method", function () {
         const shuffled = deck.shuffle();
         const shuffledStr = shuffled.join(); //we must convert to string to compare
-        const deckStr = deck.deck.join();
-        expect(shuffledStr).not.toEqual(deckStr)
+        const cardsStr = deck.cards.join();
+        expect(shuffledStr).not.toEqual(cardsStr)
         expect(deck.shuffled).toBe(true);
     })
     test("draw method", function () {
@@ -52,6 +51,6 @@ describe("Tests deck class and methods", function () {
         expect(deck.shuffled).toEqual(false);
         expect(deck.deck.length).toEqual(52);
         expect(deck.cards.length).toEqual(52);
-        expect(deck.deck).not.toEqual(deck.cards); //ensures they aren't the same array in memory
+        expect(deck.deck).not.toBe(deck.cards); //ensures they aren't the same array in memory
     })
 })

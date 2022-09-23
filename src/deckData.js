@@ -24,15 +24,15 @@ class Deck {
         if (!numCards) {
             throw new Error(`deal method requires 1 argument of type number which indicates number of cards to be dealt.`)
         }
-        if (!deck.length < numCards) {
-            throw new RangeError(`There are currently ${deck.remaining} cards in the deck, which is insufficient to draw ${numCards} cards! Create a new deck instance or reset current.`);
+        if (this.remaining < numCards) {
+            throw new RangeError(`There are currently ${this.deck.remaining} cards in the deck, which is insufficient to draw ${numCards} cards! Create a new deck instance or reset current.`);
         }
         const hand = this.deck.slice(0, numCards)
         this.remaining -= numCards
         return hand
     }
 
-    draw(hand) {
+    draw(hand) {//accepts players hand as argument, picks top card from players hand
         if (!hand) {
             throw new Error(`draw method requires 1 argument of type array which indicates players hand to draw from`)
         }
