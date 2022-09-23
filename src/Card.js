@@ -1,8 +1,7 @@
 import React, {useState} from "react";
-import Ks from './svg/Ks.svg';
-import spades from './svg/spades.svg';
 import blank_card from './svg/blank_card.svg';
-import IMAGES from './images.js'
+import IMAGES from './images.js';
+import './styles.css';
 
 // import {} from './svg'
 
@@ -14,41 +13,32 @@ const Card = ({ cardCode }) => {
     console.log("cardCode:", cardCode)
     let value = cardCode[0]
     let suit = cardCode[1]
+    let color;
     console.log("value", value)
     console.log("suit", suit)
+    if (suit === "H" || suit === "D") {
+        color = "red";
+    } else {
+        color = "black";
+    }
 
     return(
         <>
         {isShowing ? (
-            <div id="card-container">
-                <img className="card" src={blank_card} alt="" />
-                <img className="card value black" src={IMAGES[value]} alt="" />
-                <img className="card suit" src={IMAGES[suit]} alt="" />
+            <div className="game-card-container">
+                <img className="game-card" src={blank_card} alt="" />
+                <img className={`game-card value ${(color === "red") ? "card-red" : "card-black"}`} src={IMAGES[value + "_" + `${color}`]} alt="" />
+                <img className="game-card suit" src={IMAGES[suit]} alt="" />
             </div>
             ) : (
-            <div id="card-container">
-                <img className="card" src={blank_card} alt="" />
-                <img className="card" src={IMAGES["back"]} alt="" />
+            <div className="game-card-container">
+                <img className="game-card" src={blank_card} alt="" />
+                <img className="game-card" src={IMAGES["back"]} alt="" />
             </div>
             )
         }
         </>
     )
-
-    // return (
-    //     <div id="card-container">
-    //         <img className="card" src={blank_card} alt="" />
-    //         <img className="card" src={IMAGES["back"]} alt="" />
-    //     </div>
-    // )
-    // return (
-    //     <div id="card-container">
-    //         <img className="card" src={blank_card} alt="" />
-    //         <img className="card value black" src={IMAGES[value]} alt="" />
-    //         <img className="card suit" src={IMAGES[suit]} alt="" />
-
-    //     </div>
-    // )
 }
 
 export default Card;
