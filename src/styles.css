@@ -3,23 +3,25 @@ body {
     font-family: sans-serif;
 }
 
-#card-container {
+.game-card-container {
     position: relative;
     height: 3.75in;
 }
 
-.card {
+.game-card {
     position: absolute;
 }
 
 .value {
     top: 0px;
     left: 15px;
+    /* position: relative; */
 }
 
 .suit {
     top: 105px;
     left: 25px;
+    /* position: relative; */
 }
 
 .black {
