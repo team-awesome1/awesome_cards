@@ -1,7 +1,7 @@
 .game-card-container {
     height: 32vh;
     width: 50%;
-    border: solid black 2px;
+    /* border: solid black 2px; */
 }
 
 .game-card {
