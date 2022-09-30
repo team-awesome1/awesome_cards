@@ -1,106 +1,93 @@
-*{
-    clear: both;
-}
-.container{
-    width: 100%;
-    min-width: 375px;
-    margin: auto;
-    padding: 7%;
-    background-position: center top;
-    background-size: 100% auto;
-}
-h1, h2, h3{
-    font-family: 'Luckiest Guy', cursive;
-}
-h2, h3{
-    line-height: .95;
-}
-h1{
-    font-size: 15vh;
-    transform: rotate(-10deg);
-    margin-bottom: 2%;
-    -webkit-text-stroke-width: .5vh;
-    -webkit-text-stroke-color: #f8a576;
-    text-shadow: 1vh 1vh .75vh rgba(0,0,0,.4);
-}
-h2{
-    font-size: 5.5vh;
-    -webkit-text-stroke-width: .25vh;
-    -webkit-text-stroke-color: #a9d7d2;
-    text-shadow: .8vh .8vh .75vh rgba(0,0,0,.4);
-    margin-top: 5%;
-}
-h3{
-    font-size: 3vh;
-    text-shadow: .5vh .5vh .5vh rgba(0,0,0,.4);
-    -webkit-text-stroke-width: .1vh;
-}
-#question-same{
-    -webkit-text-stroke-color: #fad9d9;
-}
-#question-win{
-    -webkit-text-stroke-color: #b7d6eb;
-}
-p{
-    font-family: 'Roboto', sans-serif;
-    font-size: 2vh;
-    text-align: justify;
-    line-height: 1.25;
-    background-color: rgba(250,246,240,.9);
-}
-p:last-of-type{
-    margin-bottom: 2%;
-}
-a, a:hover, a:active{
-    color: black;
-    text-decoration: none;
-}
-#settings{
-    float: right;
-    width: 10%;
-}
-#play, #home{
-    display: block;
-    margin: 16px auto;
-    text-align: center;
-    width: 55%;
-    height: 10%;
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 3.5vh;
-    box-shadow: 1vh 1vh .75vh rgba(0,0,0,.4);
-}
-#play{
-    background-color: #fecb10;
-}
-#home{
-    background-color: #b3b7da;
-    margin-bottom: 3%;
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    h1{
-        margin-bottom: 5%;
+@media (min-width: 280px) {
+    body {
+        background-image: url("wallpaper.jpg");
+        background-size: 200%;
     }
-    #settings{
-        width: 7%;
+    h1 {
+        font-size: 25vw;
+        color: rgb(54, 54, 54);
+        margin-top: 20%;
+        text-shadow: 10px 10px 4px gray ;
+        -webkit-text-stroke-width: 1vw;
+        -webkit-text-stroke-color: #fba779;
+        transform: rotate(-10deg);
+        letter-spacing: -4px;
+    }
+    .container{
+        margin: auto;
+        padding: 7%;
+    }
+    h1, h2, h3{
+        font-family: 'Luckiest Guy', cursive;
+    }
+    h2, h3{
+        line-height: .95;
+    }
+    h2{
+        font-size: 5.5vh;
+        -webkit-text-stroke-width: .25vh;
+        -webkit-text-stroke-color: #a9d7d2;
+        text-shadow: .8vh .8vh .75vh rgba(0,0,0,.4);
+        margin-top: 5%;
+    }
+    h3{
+        font-size: 3vh;
+        text-shadow: .5vh .5vh .5vh rgba(0,0,0,.4);
+        -webkit-text-stroke-width: .1vh;
+    }
+    #question-same{
+        -webkit-text-stroke-color: #fad9d9;
+    }
+    #question-win{
+        -webkit-text-stroke-color: #b7d6eb;
+    }
+    p{
+        font-family: 'Roboto', sans-serif;
+        font-size: 2vh;
+        text-align: justify;
+        line-height: 1.25;
+        background-color: rgba(250,246,240,.9);
+    }
+    p:last-of-type{
+        margin-bottom: 2%;
+    }
+    a, a:hover, a:active{
+        color: black;
+        text-decoration: none;
+    }
+    #settings {
+        width: 6vw;
+        margin-top: 4%;
+        margin-bottom: -5%;
+        margin-left: 86%;
     }
     #play, #home{
-        display: inline;
-        float: left;
-        width: 50%;
+        display: block;
+        margin: 16px auto;
+        text-align: center;
+        width: 55%;
+        height: 10%;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 3.5vh;
+        box-shadow: 1vh 1vh .75vh rgba(0,0,0,.4);
+    }
+    #play{
+        background-color: #fecb10;
+    }
+    #home{
+        background-color: #b3b7da;
         margin-bottom: 3%;
     }
 }
-@media all and (min-width: 1024px) and (max-width: 1244px) {
-    h1{
-        margin-bottom: 8%;
+@media (min-width: 540px) {
+        body {
+            background-size: cover;
+        }
+}
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 18vw;
+        -webkit-text-stroke-width: .4vw;
+        margin-top: 4%;
     }
-    #settings{
-        width: 5%;
-    }
-    #play, #home{
-        display: inline;
-        float: left;
-        width: 50%;
-        margin-bottom: 3%;
-    } 
 }

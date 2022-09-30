@@ -15,19 +15,27 @@ class Deck {
             const j = Math.floor(Math.random() * (i + 1));
             [deck[i], deck[j]] = [deck[j], deck[i]];
         }
-        console.log("Test");
         this.shuffled = true;
         return deck;
         //source: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
     }
 
-    deal() {
-        const hands = [this.deck.slice(0, 26), this.deck.slice(26, 52)]
-        this.remaining = 0
-        return hands
+    deal(numCards) {
+        if (!numCards) {
+            throw new Error(`deal method requires 1 argument of type number which indicates number of cards to be dealt.`)
+        }
+        if (this.remaining < numCards) {
+            throw new RangeError(`There are currently ${this.deck.remaining} cards in the deck, which is insufficient to draw ${numCards} cards! Create a new deck instance or reset current.`);
+        }
+        const hand = this.deck.slice(0, numCards)
+        this.remaining -= numCards
+        return hand
     }
 
-    draw(hand) {
+    draw(hand) {//accepts players hand as argument, picks top card from players hand
+        if (!hand) {
+            throw new Error(`draw method requires 1 argument of type array which indicates players hand to draw from`)
+        }
         if (!hand.length) {
             throw new RangeError("There are no more cards in the deck! Create a new deck instance or reset current.");
         }
@@ -41,3 +49,5 @@ class Deck {
         this.remaining = this.deck.length;
     }
 }
+
+export default Deck;
