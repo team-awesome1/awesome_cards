@@ -24,12 +24,14 @@ const Card = ({ cardCode }) => {
 
     return (
         <>
-            {isShowing ? (
-                <div className="game-card-container">
-                    <img className="game-card" src={blank_card} alt="" />
-                    <img className={`game-card value ${(color === "red") ? "card-red" : "card-black"}`} src={IMAGES[value + "_" + `${color}`]} alt="" />
-                    <img className="game-card suit" src={IMAGES[suit]} alt="" />
+        {isShowing ? (
+            <div className="game-card-container">
+                <div className="game-card">
+                    <img className="blank-game-card" src={blank_card} alt="" />
+                    <img className={`card-value ${(color === "red") ? "card-red" : "card-black"}`} src={IMAGES[value + "_" + `${color}`]} alt="" />
+                    <img className="card-suit" src={IMAGES[suit]} alt="" />
                 </div>
+            </div>
             ) : (
                 <div className="game-card-container">
                     <img className="game-card" src={blank_card} alt="" />

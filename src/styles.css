@@ -1,34 +1,34 @@
-body {
-    background-color: rgb(169, 169, 169);
-    font-family: sans-serif;
-}
-
 .game-card-container {
-    position: relative;
-    height: 3.75in;
+    height: 32vh;
+    width: 50%;
+    /* border: solid black 2px; */
 }
 
 .game-card {
-    position: absolute;
+    position: relative;
+    height: 100%;
 }
 
-.value {
+.blank-game-card {
+    height: 100%;
+    left: 0px;
     top: 0px;
-    left: 15px;
-    /* position: relative; */
+    position: absolute;
+    z-index: 0;
 }
 
-.suit {
-    top: 105px;
-    left: 25px;
-    /* position: relative; */
+.card-value {
+    top: 0em;
+    left: 1.5%;
+    height: 98%;
+    position: absolute;
+    z-index: 1;
 }
 
-.black {
-    filter: grayscale(100%);
-    filter: brightness(0.0);
-}
-
-.red {
-    filter: grayscale(0%);
+.card-suit {
+    top: 29%;
+    left: 2.5%;
+    height: 39%;
+    position: absolute;
+    z-index: 1;
 }
