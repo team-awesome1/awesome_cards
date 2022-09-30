@@ -1,0 +1,10 @@
+h1 {
+    font-family: "Luckiest Guy";
+    font-size: 2rem;
+    color: rgb(54, 54, 54);
+    text-shadow: 10px 10px 4px gray ;
+    -webkit-text-stroke-width: .08vw;
+    -webkit-text-stroke-color: #fba779;
+    transform: rotate(-6deg);
+    letter-spacing: -.5px;
+}

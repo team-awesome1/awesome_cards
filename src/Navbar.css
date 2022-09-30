@@ -1,34 +1,57 @@
-.Navbar {
-    height: 70px;
-    width: 100vw;
+.navbar {
     background-color: #a9d7d2;
-    padding: 1rem;
-    justify-content: flex-end;
-}
-
-.NavLinks {
-    list-style: none;
-    position: relative;
-    display: flex;    
-}
-
-.NavLinks a {
-    display: block;
-    width: 100%;
-    color: #b3b7da;
     font-family: "Luckiest Guy";
-    font-size: 1.3rem;
-    text-decoration: none;
-    line-height: 40px;
-    text-align: center;
-    margin: 2px;
-    padding: 2px;
 }
 
-.NavLinks a.active {
+#logo {
+    text-decoration-line: none;
+}
+
+#play-now {
+    color: #b3b7da;
+    text-decoration-line: none;
+}
+
+#instructions {
+    color: #b3b7da;
+    text-decoration-line: none;
+}
+
+#about {
+    color: #b3b7da;
+    text-decoration-line: none;
+}
+
+#play-now:hover {
+    font-size: 150%;  
+}
+
+#instructions:hover {
+    font-size: 150%; 
+}
+
+#about:hover {
+    font-size: 150%; 
+}
+
+#loginBtn {
+    background-color: #ff7c9c;
+    border-color: white;
+}
+
+#loginBtnText {
+    color: white;
+    text-decoration-line: none;
+}
+
+#play-now[aria-current="page"] {
     color:#ff7c9c;
 }
 
-.NavLinks a:hover {
-    font-size: 2.5rem;        
+#instructions[aria-current="page"] {
+    color:#ff7c9c;
+}
+
+#about[aria-current="page"] {
+    color:#ff7c9c;
 }
