@@ -1,12 +1,14 @@
 import { Provider } from 'react-redux';
 import store from './store/store';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
+import NavBar from './NavBar';
 
 function App() {
+  const location = useLocation();
   return (
     <Provider store={store}>
       <div className='App'>
-        {/* a nav bar can safely go here */}
+        {location.pathname !== '/' ? <NavBar /> : null}
         <Outlet />
       </div>
     </Provider>
