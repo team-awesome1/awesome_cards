@@ -3,7 +3,6 @@ import blank_card from './svg/blank_card.svg';
 import IMAGES from './images.js';
 import './styles.css';
 
-// import {} from './svg'
 
 // const Card = ({ value, suit, faceUp }) => {
 const Card = ({ cardCode }) => {
