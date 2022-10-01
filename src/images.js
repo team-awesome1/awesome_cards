@@ -30,7 +30,7 @@ const IMAGES = {
     "D": require('./svg/diamonds.svg').default,
     "H": require('./svg/hearts.svg').default,
     "back": require('./svg/back.svg').default,
-    "redK": require('./svg/redK.svg')
+    "redK": require('./svg/redK.svg').default
 }
 
 export default IMAGES;

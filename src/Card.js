@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import blank_card from './svg/blank_card.svg';
 import IMAGES from './images.js';
 import './styles.css';
+import CardValue from "./CardValue";
 
 
 // const Card = ({ value, suit, faceUp }) => {
@@ -29,6 +30,8 @@ const Card = ({ cardCode }) => {
                     <img className="blank-game-card" src={blank_card} alt="" />
                     <img className={`card-value ${(color === "red") ? "card-red" : "card-black"}`} src={IMAGES[value + "_" + `${color}`]} alt="" />
                     <img className="card-suit" src={IMAGES[suit]} alt="" />
+                    <CardValue suit={ suit } value={ value } location="top" color={ color } />
+                    <CardValue suit={ suit } value={ value } location="bottom" color={ color } />
                 </div>
             </div>
             ) : (

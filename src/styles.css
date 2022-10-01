@@ -1,6 +1,6 @@
 .game-card-container {
     height: 32vh;
-    width: 50%;
+    /* width: 50%; */
     /* border: solid black 2px; */
 }
 
@@ -31,4 +31,22 @@
     height: 39%;
     position: absolute;
     z-index: 1;
+}
+
+.value-red path{
+    fill: pink;
+}
+
+.card-value-top {
+    position: absolute;
+    top: 5%;
+    left: 8%;
+    height: 20%;
+}
+.card-value-bottom {
+    position: absolute;
+    bottom: 7%;
+    right: 8%;
+    height: 20%;
+    transform: rotate(180deg);
 }

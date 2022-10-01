@@ -6,8 +6,9 @@ import CardValue from './CardValue';
 
 function App() {
   return (
-    <Card cardCode={"KH"}/>
-    <CardValue />
+    <>
+      <Card cardCode={"KH"}/>
+    </>
   );
 }
 
