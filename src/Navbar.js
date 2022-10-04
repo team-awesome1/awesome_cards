@@ -6,7 +6,7 @@ import About from './routes/About';
 import PlayNow from './routes/PlayNow';
 import SignIn from './routes/SignIn';
 import Logo from './Logo';
-import './NavBar.css';
+import './Navbar.css';
 
 
 const NavBar = () => { 
