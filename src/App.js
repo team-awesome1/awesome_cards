@@ -6,12 +6,10 @@ import NavBar from './NavBar';
 function App() {
   const location = useLocation();
   return (
-    <Provider store={store}>
-      <div className='App'>
-        {location.pathname !== '/' ? <NavBar /> : null}
-        <Outlet />
-      </div>
-    </Provider>
+    <div className='App'>
+      {location.pathname !== '/' ? <NavBar /> : null}
+      <Outlet />
+    </div>
   );
 }
 

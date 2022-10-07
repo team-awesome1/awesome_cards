@@ -1,0 +1,57 @@
+.navbar {
+    background-color: #a9d7d2;
+    font-family: "Luckiest Guy";
+}
+
+#logo {
+    text-decoration-line: none;
+}
+
+#play-now {
+    color: #b3b7da;
+    text-decoration-line: none;
+}
+
+#instructions {
+    color: #b3b7da;
+    text-decoration-line: none;
+}
+
+#about {
+    color: #b3b7da;
+    text-decoration-line: none;
+}
+
+#play-now:hover {
+    font-size: 150%;  
+}
+
+#instructions:hover {
+    font-size: 150%; 
+}
+
+#about:hover {
+    font-size: 150%; 
+}
+
+#loginBtn {
+    background-color: #ff7c9c;
+    border-color: white;
+}
+
+#loginBtnText {
+    color: white;
+    text-decoration-line: none;
+}
+
+#play-now[aria-current="page"] {
+    color:#ff7c9c;
+}
+
+#instructions[aria-current="page"] {
+    color:#ff7c9c;
+}
+
+#about[aria-current="page"] {
+    color:#ff7c9c;
+}
