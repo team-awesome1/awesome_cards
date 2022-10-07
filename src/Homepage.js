@@ -7,21 +7,6 @@ const Homepage = () => {
   return (
     <div className='Homepage'>
       <div className='OptionsGear'>
-        {/* <OptionsGear /> */}
-        {/* OptionsGear Component goes here; does not exist yet--see placeholder below */}
-        {/* Attribution link is required if we want to use this icon for free */}
-        <figure>
-          <img className='gearIcon' src='/gearIcon.png' alt='gear wheel' />
-          <figcaption>
-            <a target='_blank' rel='noreferrer' href='https://icons8.com/icon/qpThLj7vV2Sg/settings'>
-              Settings
-            </a>{' '}
-            icon by{' '}
-            <a target='_blank' rel='noreferrer' href='https://icons8.com'>
-              Icons8
-            </a>
-          </figcaption>
-        </figure>
       </div>
       <div className='container'>
         <h1 className='Title'>WAR!</h1>
