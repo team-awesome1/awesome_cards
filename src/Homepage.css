@@ -8,7 +8,8 @@
     .Homepage {
         font-family: "Luckiest Guy";
         text-align: center;
-        position: relative;
+        display: flex;
+        align-items: center;
         min-height: 100vh;
     }
     .gearIcon {
@@ -21,6 +22,7 @@
         font-size: 8px;
         margin-left: 80%;
     }
+
     .Title {
         font-size: 36vw;
         color: rgb(54, 54, 54);
