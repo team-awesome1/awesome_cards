@@ -13,13 +13,13 @@ const Card = ({ cardCode }) => {
     console.log("cardCode:", cardCode)
     let value = cardCode[0]
     let suit = cardCode[1]
-    let color;
+    let valueColor;
     console.log("value", value)
     console.log("suit", suit)
     if (suit === "H" || suit === "D") {
-        color = "red";
+        valueColor = "suit-heart-diamond";
     } else {
-        color = "black";
+        valueColor = "suit-club-spade";
     }
 
     return (
@@ -40,9 +40,9 @@ const Card = ({ cardCode }) => {
                 </div>
                 <div class="demoWrapper2">
                     <div class="demoCard2">
-                        <div class="card-value2">K</div>
-                        <div class="card-value2b">K</div>
-                        <img className="card-suit" src={IMAGES[suit]} alt="" />
+                        <div class={`card-value2 ${valueColor}`}>{value}</div>
+                        <div class={`card-value2b ${valueColor}`}>{value}</div>
+                        <img className="card-suit" src={IMAGES[suit]} alt="card suit" />
                     </div>
                 </div>
             </div>

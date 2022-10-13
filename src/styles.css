@@ -98,7 +98,7 @@
     /* height: 10vh; */
     font-size: 8vh;
     line-height: 6vh;
-    color: black;
+    /* color: black; */
     left: 1vh;
     top: 1.5vh;
     position: absolute;
@@ -107,9 +107,16 @@
     /* height: 10vh; */
     font-size: 8vh;
     line-height: 6vh;
-    color: black;
+    /* color: black; */
     right: 1vh;
     bottom: 1.5vh;
     position: absolute;
     transform: rotate(180deg);
+}
+
+.suit-heart-diamond {
+    color: red;
+}
+.suit-club-spade {
+    color: black;
 }
