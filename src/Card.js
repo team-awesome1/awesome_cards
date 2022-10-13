@@ -25,13 +25,25 @@ const Card = ({ cardCode }) => {
     return (
         <>
         {isShowing ? (
-            <div className="game-card-container">
-                <div className="game-card">
-                    <img className="blank-game-card" src={blank_card} alt="" />
-                    <img className={`card-value ${(color === "red") ? "card-red" : "card-black"}`} src={IMAGES[value + "_" + `${color}`]} alt="" />
-                    <img className="card-suit" src={IMAGES[suit]} alt="" />
-                    <CardValue suit={ suit } value={ value } location="top" color={ color } />
-                    <CardValue suit={ suit } value={ value } location="bottom" color={ color } />
+            // <div className="game-card-container">
+            //     <div className="game-card">
+            //         <img className="blank-game-card" src={blank_card} alt="" />
+            //         <img className={`card-value ${(color === "red") ? "card-red" : "card-black"}`} src={IMAGES[value + "_" + `${color}`]} alt="" />
+            //         <img className="card-suit" src={IMAGES[suit]} alt="" />
+            //         <CardValue suit={ suit } value={ value } location="top" color={ color } />
+            //         <CardValue suit={ suit } value={ value } location="bottom" color={ color } />
+            //     </div>
+            // </div>
+            <div>
+                <div class="demoWrapper">
+                    <div class="demoCard"></div>
+                </div>
+                <div class="demoWrapper2">
+                    <div class="demoCard2">
+                        <div class="card-value2">K</div>
+                        <div class="card-value2b">K</div>
+                        <img className="card-suit" src={IMAGES[suit]} alt="" />
+                    </div>
                 </div>
             </div>
             ) : (
