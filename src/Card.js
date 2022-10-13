@@ -21,37 +21,28 @@ const Card = ({ cardCode }) => {
     } else {
         valueColor = "suit-club-spade";
     }
+    if (value === "0") {value = "10"};
 
     return (
         <>
         {isShowing ? (
-            // <div className="game-card-container">
-            //     <div className="game-card">
-            //         <img className="blank-game-card" src={blank_card} alt="" />
-            //         <img className={`card-value ${(color === "red") ? "card-red" : "card-black"}`} src={IMAGES[value + "_" + `${color}`]} alt="" />
-            //         <img className="card-suit" src={IMAGES[suit]} alt="" />
-            //         <CardValue suit={ suit } value={ value } location="top" color={ color } />
-            //         <CardValue suit={ suit } value={ value } location="bottom" color={ color } />
-            //     </div>
-            // </div>
             <div>
-                <div class="demoWrapper">
-                    <div class="demoCard"></div>
-                </div>
-                <div class="demoWrapper2">
-                    <div class="demoCard2">
-                        <div class={`card-value2 ${valueColor}`}>{value}</div>
-                        <div class={`card-value2b ${valueColor}`}>{value}</div>
+                <div class="card-wrapper">
+                    <div class="card-background">
+                        <div class={`card-value-top ${valueColor}`}>{value}</div>
+                        <div class={`card-value-bottom ${valueColor}`}>{value}</div>
                         <img className="card-suit" src={IMAGES[suit]} alt="card suit" />
                     </div>
                 </div>
             </div>
             ) : (
-                <div className="game-card-container">
-                    <img className="game-card" src={blank_card} alt="" />
-                    <img className="game-card" src={IMAGES["back"]} alt="" />
+                <div className="card-wrapper">
+                    <div class="card-background">
+                        <img class="card-back" src={IMAGES["solid-background"]} alt="" />
+                    </div>                    
                 </div>
             )
+
             }
         </>
     )

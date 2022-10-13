@@ -8,7 +8,9 @@ function App() {
   return (
     <>
       <Card cardCode={"KH"}/>
-      {/* <Card cardCode={"9S"}/> */}
+      <Card cardCode={"9S"}/>
+      <Card cardCode={"JD"}/>
+      <Card cardCode={"0C"}/>
     </>
   );
 }
