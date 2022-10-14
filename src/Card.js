@@ -37,7 +37,7 @@ const Card = ({ cardCode }) => {
             ) : (
                 <div className="card-wrapper">
                     <div class="card-background">
-                        <img class="card-back" src={IMAGES["solid-background"]} alt="" />
+                        <img class="card-back" src={IMAGES["theme-card-back"]} alt="" />
                     </div>                    
                 </div>
             )
