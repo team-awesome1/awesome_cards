@@ -1,4 +1,4 @@
-import { Provider } from 'react-redux';
+// import { Provider } from 'react-redux';
 import store from './store/store';
 import { Outlet, useLocation } from 'react-router-dom';
 import NavBar from './NavBar';

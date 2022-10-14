@@ -1,34 +1,58 @@
-.game-card-container {
-    height: 32vh;
-    width: 50%;
-    /* border: solid black 2px; */
-}
-
 .game-card {
     position: relative;
     height: 100%;
 }
 
-.blank-game-card {
-    height: 100%;
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    z-index: 0;
-}
-
-.card-value {
-    top: 0em;
-    left: 1.5%;
-    height: 98%;
-    position: absolute;
-    z-index: 1;
-}
-
 .card-suit {
-    top: 29%;
-    left: 2.5%;
-    height: 39%;
+    top: 31%;
+    left: 7%;
+    width: 85%;
     position: absolute;
     z-index: 1;
+}
+
+.card-wrapper {
+    box-sizing: border-box;
+    max-width: 20vh;
+    height: 29vh;
+  }
+  
+.card-background {
+    width: 100%;
+    height: 100%;
+    padding: 1vh;
+    background: white;
+    border-radius: 10%;
+    border: 2px solid rgba(0,0,0,.1);
+    position: relative;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    }
+
+.card-value-top {
+    font-size: 8vh;
+    line-height: 6vh;
+    left: 1vh;
+    top: 1.5vh;
+    position: absolute;
+}
+.card-value-bottom {
+    font-size: 8vh;
+    line-height: 6vh;
+    right: 1vh;
+    bottom: 1.5vh;
+    position: absolute;
+    transform: rotate(180deg);
+}
+
+.suit-heart-diamond {
+    color: red;
+}
+.suit-club-spade {
+    color: black;
+}
+
+.card-back {
+    height: 100%;
 }
