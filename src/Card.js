@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import blank_card from './svg/blank_card.svg';
 import IMAGES from './images.js';
 import './styles.css';
-import CardValue from "./CardValue";
 
 
 // const Card = ({ value, suit, faceUp }) => {
