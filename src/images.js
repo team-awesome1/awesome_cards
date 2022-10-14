@@ -29,7 +29,8 @@ const IMAGES = {
     "C": require('./svg/clubs.svg').default,
     "D": require('./svg/diamonds.svg').default,
     "H": require('./svg/hearts.svg').default,
-    "back": require('./svg/back.svg').default
+    "back": require('./svg/back.svg').default,
+    "solid-background": require('./svg/solid_background.svg').default
 }
 
 export default IMAGES;

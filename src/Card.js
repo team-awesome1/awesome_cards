@@ -3,7 +3,6 @@ import blank_card from './svg/blank_card.svg';
 import IMAGES from './images.js';
 import './styles.css';
 
-// import {} from './svg'
 
 // const Card = ({ value, suit, faceUp }) => {
 const Card = ({ cardCode }) => {
@@ -13,31 +12,36 @@ const Card = ({ cardCode }) => {
     console.log("cardCode:", cardCode)
     let value = cardCode[0]
     let suit = cardCode[1]
-    let color;
+    let valueColor;
     console.log("value", value)
     console.log("suit", suit)
     if (suit === "H" || suit === "D") {
-        color = "red";
+        valueColor = "suit-heart-diamond";
     } else {
-        color = "black";
+        valueColor = "suit-club-spade";
     }
+    if (value === "0") {value = "10"};
 
     return (
         <>
         {isShowing ? (
-            <div className="game-card-container">
-                <div className="game-card">
-                    <img className="blank-game-card" src={blank_card} alt="" />
-                    <img className={`card-value ${(color === "red") ? "card-red" : "card-black"}`} src={IMAGES[value + "_" + `${color}`]} alt="" />
-                    <img className="card-suit" src={IMAGES[suit]} alt="" />
+            <div>
+                <div class="card-wrapper">
+                    <div class="card-background">
+                        <div class={`card-value-top ${valueColor}`}>{value}</div>
+                        <div class={`card-value-bottom ${valueColor}`}>{value}</div>
+                        <img className="card-suit" src={IMAGES[suit]} alt="card suit" />
+                    </div>
                 </div>
             </div>
             ) : (
-                <div className="game-card-container">
-                    <img className="game-card" src={blank_card} alt="" />
-                    <img className="game-card" src={IMAGES["back"]} alt="" />
+                <div className="card-wrapper">
+                    <div class="card-background">
+                        <img class="card-back" src={IMAGES["solid-background"]} alt="" />
+                    </div>                    
                 </div>
             )
+
             }
         </>
     )
