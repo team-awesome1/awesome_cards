@@ -5,9 +5,6 @@ export default function Instructions() {
   return (
     <main style={{ padding: "1rem 0" }}>
       <div className="container">
-        <a href="#">
-          <img src="/gearIcon.png" alt="settings gear icon" id="settings"></img>
-        </a>
         <h1>
           War!
         </h1>
@@ -39,8 +36,8 @@ export default function Instructions() {
           <p>Sounds easy, right? But don't get too confident! After all, you may win a few battles, but can you win the War?
           </p>
         </div>
-        <a href="/play-now" id="play">Play Now</a>
-        <a href="/" id="home">Back to Home</a>
+        <a href="/play-now" id="PlayNow Btn">Play Now</a>
+        <a href="/" id="Home Btn">Back to Home</a>
       </div>
     </main>
   );

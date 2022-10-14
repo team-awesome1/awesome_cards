@@ -1,17 +1,15 @@
 // import { Provider } from 'react-redux';
 import store from './store/store';
-import { Outlet } from 'react-router-dom';
-import Card from './Card';
-import CardValue from './CardValue';
+import { Outlet, useLocation } from 'react-router-dom';
+import NavBar from './NavBar';
 
 function App() {
+  const location = useLocation();
   return (
-    <>
-      <Card cardCode={"KH"}/>
-      <Card cardCode={"9S"}/>
-      <Card cardCode={"JD"}/>
-      <Card cardCode={"0C"}/>
-    </>
+    <div className='App'>
+      {location.pathname !== '/' ? <NavBar /> : null}
+      <Outlet />
+    </div>
   );
 }
 

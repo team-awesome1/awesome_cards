@@ -46,7 +46,7 @@
         font-size: 2vh;
         text-align: justify;
         line-height: 1.25;
-        background-color: rgba(250,246,240,.9);
+        margin: .5rem 0;
     }
     p:last-of-type{
         margin-bottom: 2%;
@@ -61,7 +61,7 @@
         margin-bottom: -5%;
         margin-left: 86%;
     }
-    #play, #home{
+    #PlayNow, #Home{
         display: block;
         margin: 16px auto;
         text-align: center;
@@ -71,10 +71,10 @@
         font-size: 3.5vh;
         box-shadow: 1vh 1vh .75vh rgba(0,0,0,.4);
     }
-    #play{
+    #PlayNow{
         background-color: #fecb10;
     }
-    #home{
+    .Home{
         background-color: #b3b7da;
         margin-bottom: 3%;
     }
