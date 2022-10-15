@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import IMAGES from './images.js';
-import './styles.css';
+import './Card.css';
 
 
 // const Card = ({ value, suit, faceUp }) => {
@@ -41,7 +41,7 @@ const Card = ({ cardCode }) => {
                         <div class={`card-value-top ${valueColor}`}>{valueCode}</div>
                         <div class={`card-value-bottom ${valueColor}`}>{valueCode}</div>
                         <img className="card-suit" src={IMAGES[suitCode]} alt="card suit" />
-                        {faceCard ? <img src={IMAGES[faceCard]} /> : <div> NOT facecard </div>}
+                        {faceCard ? <img className="face-card" src={IMAGES[faceCard]} /> : ""}
                     </div>
                 </div>
             </div>

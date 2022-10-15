@@ -56,3 +56,10 @@
 .card-back {
     height: 100%;
 }
+
+.face-card {
+    height: 25vh;
+    left: 2.5vh;
+    top: 2vh;
+    position: absolute;
+}
