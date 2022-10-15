@@ -7,6 +7,7 @@ class Deck {
         this.shuffled = false;
         this.deck = this.cards.slice(0, this.cards.length); //property to keep track of deck that will change with gameplay. uses slice to create copy so that cards property is preserved
         this.remaining = this.deck.length;
+        this.ranks = ["2", "3", "4", "5", "6", "7", "8", "9", "0", "J", "Q", "K", "A"]
     }
 
     shuffle() {

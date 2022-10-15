@@ -64,5 +64,7 @@ describe("Tests deck class and methods", function () {
     })
     test("compare method", function () {
         expect(deck.compare("6D", "7D")).toEqual("7D")
+        expect(deck.compare("KD", "QH")).toEqual("KD")
+        expect(deck.compare("6D", "6H")).toEqual("WAR!")
     })
 })
