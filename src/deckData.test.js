@@ -62,4 +62,7 @@ describe("Tests deck class and methods", function () {
         expect(deck.cards.length).toEqual(52);
         expect(deck.deck).not.toBe(deck.cards); //ensures they aren't the same array in memory
     })
+    test("compare method", function () {
+        expect(deck.compare("6D", "7D")).toEqual("7D")
+    })
 })

@@ -43,6 +43,16 @@ class Deck {
         return card
     }
 
+    compare(card1, card2) {
+        if (this.ranks.indexOf(card1[0]) > this.ranks.indexOf(card2[0])) {
+            return card1
+        } else if (this.ranks.indexOf(card1[0]) < this.ranks.indexOf(card2[0])) {
+            return card2
+        } else {
+            return "WAR!"
+        }
+    }
+
     reset() {
         this.deck = this.cards.slice(0, this.cards.length);
         this.shuffled = false;
