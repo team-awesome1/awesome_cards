@@ -27,7 +27,7 @@ class Deck {
         if (this.remaining < numCards) {
             throw new RangeError(`There are currently ${this.deck.remaining} cards in the deck, which is insufficient to draw ${numCards} cards! Create a new deck instance or reset current.`);
         }
-        const hand = this.deck.slice(0, numCards)
+        const hand = this.deck.splice(0, numCards)
         this.remaining -= numCards
         return hand
     }
