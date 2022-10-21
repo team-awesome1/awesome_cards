@@ -12,7 +12,6 @@ export default function PlayNow() {
     setHand1Data(deck.deal(26))
     setHand2Data(deck.deal(26))
   }
-
   return (
     <>
       <button onClick={startGame}>Start Game</button>

@@ -33,7 +33,8 @@ const IMAGES = {
     "solid-background": require('./svg/solid_background.svg').default,
     "king": require('./svg/king_portrait.svg').default,
     "queen": require('./svg/queen_portrait.svg').default,
-    "jack": require('./svg/jack_portrait.svg').default
+    "jack": require('./svg/jack_portrait.svg').default,
+    "theme-card-back": require('./svg/theme_card_back.svg').default
 }
 
 export default IMAGES;

@@ -23,10 +23,12 @@ const Card = ({ cardCode }) => {
     console.log("value", valueCode)
     console.log("suit", suitCode)
     if (suitCode === "H" || suitCode === "D") {
+
         valueColor = "suit-heart-diamond";
         suit = suitCode === "H" ? "heart" : "diamond";
     } else {
         valueColor = "suit-club-spade";
+
         suit = suitCode === "C" ? "club" : "spade";
     } 
 
@@ -42,13 +44,13 @@ const Card = ({ cardCode }) => {
                         <div class={`card-value-bottom ${valueColor}`}>{valueCode}</div>
                         <img className="card-suit" src={IMAGES[suitCode]} alt="card suit" />
                         {faceCard ? <img className="face-card" src={IMAGES[faceCard]} /> : ""}
+
                     </div>
                 </div>
-            </div>
             ) : (
                 <div className="card-wrapper">
                     <div class="card-background">
-                        <img class="card-back" src={IMAGES["solid-background"]} alt="" />
+                        <img class="card-back" src={IMAGES["theme-card-back"]} alt="" />
                     </div>                    
                 </div>
             )
