@@ -19,18 +19,27 @@ describe("Tests deck class and methods", function () {
     })
     test("deal method", function () {
         let hand;
+        let hand2;
         function dealHand(numCards) {
             hand = deck.deal(numCards);
+            hand2 = deck.deal(numCards)
         }
         try {
             dealHand(53)
         } catch (err) {
-            expect(err instanceof RangeError).toBeTruthy;
+            expect(err instanceof RangeError).toBeTruthy; //checks that error is being thrown and error type is correct
         }
         expect(dealHand(26)).not.toThrowError;
         expect(hand.length).toEqual(26);
+        expect(hand2.length).toEqual(26)
         expect(Array.isArray(hand)).toBeTruthy;
-        expect(deck.remaining).toEqual(26);
+        expect(deck.remaining).toEqual(0);
+        expect(hand.every((val, idx) => val === hand2[idx])).toBeFalsy //ensures that state of deck class was changed across draws, otherwise both hands would be identical
+        function hasDuplicates(hand, hand2) {
+            const array = hand.concat(hand2)
+            return (new Set(array)).size !== array.length;
+        }
+        expect(hasDuplicates(hand, hand2)).toBeFalsy //ensures that there are no duplicate values at all
     })
     test("shuffle method", function () {
         const shuffled = deck.shuffle();
@@ -52,5 +61,10 @@ describe("Tests deck class and methods", function () {
         expect(deck.deck.length).toEqual(52);
         expect(deck.cards.length).toEqual(52);
         expect(deck.deck).not.toBe(deck.cards); //ensures they aren't the same array in memory
+    })
+    test("compare method", function () {
+        expect(deck.compare("6D", "7D")).toEqual("7D")
+        expect(deck.compare("KD", "QH")).toEqual("KD")
+        expect(deck.compare("6D", "6H")).toEqual("WAR!")
     })
 })
