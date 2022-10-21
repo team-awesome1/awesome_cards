@@ -30,7 +30,6 @@ const IMAGES = {
     "D": require('./svg/diamonds.svg').default,
     "H": require('./svg/hearts.svg').default,
     "back": require('./svg/back.svg').default,
-    "solid-background": require('./svg/solid_background.svg').default,
     "king": require('./svg/king_portrait.svg').default,
     "queen": require('./svg/queen_portrait.svg').default,
     "jack": require('./svg/jack_portrait.svg').default,
