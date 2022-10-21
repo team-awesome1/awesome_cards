@@ -47,6 +47,7 @@ const Card = ({ cardCode }) => {
 
                     </div>
                 </div>
+            </div>
             ) : (
                 <div className="card-wrapper">
                     <div class="card-background">
