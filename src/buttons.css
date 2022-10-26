@@ -1,0 +1,36 @@
+@media (min-width: 280px) {
+    
+    .buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Btn {
+        border-radius: 5px;
+        padding: 8px 10px 3px 10px;
+        font-size: 3.5vh;
+        margin-bottom: 1em;
+        border: none;
+        text-align: center;
+        font-family: 'Luckiest Guy', cursive;
+        box-shadow: 1vh 1vh .75vh rgba(0,0,0,.4);
+    }
+
+    .SignIn{
+        background-color: #ff7c9c;
+
+    }
+
+    .HowTo{
+        background-color: #a9d7d2;
+    }
+
+    .PlayNow{
+        background-color: #fecb10;
+    }
+
+    .Home{
+        background-color: #b3b7da;
+        margin-left: 10px;
+    }
+}

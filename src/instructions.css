@@ -61,29 +61,14 @@
         margin-bottom: -5%;
         margin-left: 86%;
     }
-    #PlayNow, #Home{
-        display: block;
-        margin: 16px auto;
-        text-align: center;
-        width: 55%;
-        height: 10%;
-        font-family: 'Luckiest Guy', cursive;
-        font-size: 3.5vh;
-        box-shadow: 1vh 1vh .75vh rgba(0,0,0,.4);
-    }
-    #PlayNow{
-        background-color: #fecb10;
-    }
-    .Home{
-        background-color: #b3b7da;
-        margin-bottom: 3%;
-    }
 }
+
 @media (min-width: 540px) {
         body {
             background-size: cover;
         }
 }
+
 @media (min-width: 1024px) {
     h1 {
         font-size: 18vw;

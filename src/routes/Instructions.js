@@ -1,4 +1,6 @@
 import '../instructions.css';
+import '../buttons.css';
+import { Link } from 'react-router-dom';
 
 
 export default function Instructions() {
@@ -36,8 +38,8 @@ export default function Instructions() {
           <p>Sounds easy, right? But don't get too confident! After all, you may win a few battles, but can you win the War?
           </p>
         </div>
-        <a href="/play-now" id="PlayNow Btn">Play Now</a>
-        <a href="/" id="Home Btn">Back to Home</a>
+        <Link to="/play-now"><button className="Btn PlayNow">Play Now</button></Link>
+        <Link to="/"><button className="Btn Home">Back to Home</button></Link>
       </div>
     </main>
   );
