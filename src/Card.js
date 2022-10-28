@@ -14,7 +14,7 @@ const Card = ({ cardCode }) => {
     let suit;
     let valueColor;
     let faceCard;
-    
+
     if (valueCode === "J" || valueCode === "Q" || valueCode === "K") {
         if (valueCode === "J") {faceCard = "jack"};
         if (valueCode === "Q") {faceCard = "queen"};
@@ -30,7 +30,7 @@ const Card = ({ cardCode }) => {
         valueColor = "suit-club-spade";
 
         suit = suitCode === "C" ? "club" : "spade";
-    } 
+    }
 
     if (valueCode === "0") {valueCode = "10"};
 
@@ -38,10 +38,10 @@ const Card = ({ cardCode }) => {
         <>
         {isShowing ? (
             <div>
-                <div class="card-wrapper">
-                    <div class="card-background">
-                        <div class={`card-value-top ${valueColor}`}>{valueCode}</div>
-                        <div class={`card-value-bottom ${valueColor}`}>{valueCode}</div>
+                <div className="card-wrapper">
+                    <div className="card-background">
+                        <div className={`card-value-top ${valueColor}`}>{valueCode}</div>
+                        <div className={`card-value-bottom ${valueColor}`}>{valueCode}</div>
                         <img className="card-suit" src={IMAGES[suitCode]} alt="card suit" />
                         {faceCard ? <img className="face-card" src={IMAGES[faceCard]} /> : ""}
 
@@ -50,9 +50,9 @@ const Card = ({ cardCode }) => {
             </div>
             ) : (
                 <div className="card-wrapper">
-                    <div class="card-background">
-                        <img class="card-back" src={IMAGES["theme-card-back"]} alt="" />
-                    </div>                    
+                    <div className="card-background">
+                        <img className="card-back" src={IMAGES["theme-card-back"]} alt="" />
+                    </div>
                 </div>
             )
 
