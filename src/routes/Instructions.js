@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../instructions.css';
+import '../styles/instructions.css';
 
 
 export default function Instructions() {

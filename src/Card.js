@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import IMAGES from './images.js';
-import './Card.css';
+import './styles/Card.css';
 
 
 // const Card = ({ value, suit, faceUp }) => {
