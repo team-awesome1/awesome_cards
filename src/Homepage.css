@@ -12,33 +12,39 @@
         align-items: center;
         min-height: 100vh;
     }
-    .gearIcon {
-        width: 12vw;
-        margin-top: 10%;
-        margin-left: 80%;
-    }
-    figcaption {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 8px;
-        margin-left: 80%;
-    }
-
     .Title {
         font-size: 36vw;
         color: rgb(54, 54, 54);
         margin-top: 20%;
-        margin-bottom: -3%;
+        margin-bottom: 2%;
         text-shadow: 10px 10px 4px gray ;
         -webkit-text-stroke-width: 1.2vw;
         -webkit-text-stroke-color: #fba779;
         transform: rotate(-6deg);
         letter-spacing: -4px;
     }
+
     .Btn {
-        font-size: 8vw;
-        margin: 0% 0% 4%;
+        display: block;
+        font-size: 3.5vh;
+        width: 62%;
+        min-width: 62%;
+        max-height: 10%;
+        margin: 1% auto;
+        border: none;
+        text-align: center;
+        font-family: 'Luckiest Guy', cursive;
+        box-shadow: 1vh 1vh .75vh rgba(0,0,0,.4);
     }
-    
+    .PlayNow{
+        background-color: #fecb10;
+    }
+    .SignIn{
+        background-color: #ff7c9c;
+    }
+    .HowTo{
+        background-color: #a9d7d2;
+    }
     footer {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 12px; 
@@ -55,44 +61,27 @@
     body {
         background-size: cover;
     }
-    .gearIcon {
-        width: 8vw;
-        margin-top: 10%;
-        margin-left: 80%;
-    }
 
     .Title {
-        font-size: 28vw;
+        font-size: 22vw;
         -webkit-text-stroke-width: .6vw;
-        margin-top: 20%;
+        margin-top: -6%;
     }
-
-    .Btn {
-        font-size: 6vw;
-        margin: 0% 0% 2%;
-    }
+   /* .Btn{
+        display: block;
+        margin: auto;
+        width: 45%;
+        min-width: 45%;
+        font-size: 3vh;
+    }*/
 }
 
 /* For desktops and extra large tablets */
 
 @media (min-width: 1024px) {
-    .gearIcon {
-        width: 6vw;
-        margin-top: 4%;
-        margin-left: 86%;
-    }
-
-    figcaption {
-        margin-left: 86%;
-    }
-
     .Title {
         font-size: 18vw;
         -webkit-text-stroke-width: .4vw;
         margin-top: 4%;
-    }
-    .Btn {
-        font-size: 3vw;
-        margin: 0% 0% 2%;
     }
 }
