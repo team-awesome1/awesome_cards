@@ -1,6 +1,7 @@
 import Deck from "../deckData";
 import CardArea from "../CardArea";
 import { useState } from "react";
+import Scoreboard from "../scoreboard/Scoreboard";
 
 export default function PlayNow() {
   const [hand1Data, setHand1Data] = useState(null);
@@ -24,7 +25,8 @@ export default function PlayNow() {
         gameInProgress={gameStart}
         hand1Data={hand1Data}
         hand2Data={hand2Data}
-       />
+       />    
+      <Scoreboard />
     </>
   );
 }

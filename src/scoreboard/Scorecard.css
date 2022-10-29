@@ -1,0 +1,101 @@
+/* for small mobile devices */
+@media (min-width: 280px) {
+
+    .scoreboard {
+        font-family: "Luckiest Guy";
+        border-radius: 10px;
+        padding: 0px;
+        max-width: 95vw;
+    }
+    
+    .scorecard {
+        text-align: center;
+        font-size: 1em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        position: relative;
+        background-color: transparent;
+        margin-top: .6em;
+        margin-bottom: .6em;
+        border-radius: 5px;
+    }
+    
+    .scorecard-frame {
+        background-color: #B7D6EB;
+        margin: 10px;
+        border-radius: 10px;
+        text-align: center;
+        min-width: 5em;
+        position: relative;
+    }
+    
+    .score {
+        text-align: center;
+        color: #FBA779;
+        font-size: 4em;
+    }
+    
+    .scorecard-title {
+        font-size: 1.2em;
+        color: #fecb10;
+        -webkit-text-stroke-width:.1vw;
+        -webkit-text-stroke-color: gray ;
+    }
+
+    .message {
+        color: #ff7c9c;
+        font-size: 1.5em;
+        background-color: transparent;
+        margin-top: .2em;
+    }
+
+    @keyframes grow {
+        from {font-size: .1em;}
+        to {font-size: 2.3em;}
+      }
+
+    .decoration {        
+        font-size: 2.3em;
+        animation-name: grow;
+        animation-duration: 3s;        
+    }
+
+    #user-score .score{
+        margin-top: .3em;
+    }
+}
+
+/* For large mobile devices and tablets */
+@media (min-width: 540px) {
+    .scoreboard {
+        background-color: #B3B7DC;
+        padding: 10px 20px;
+        max-width: 70vw;
+    }
+    
+    .scorecard {
+        padding-bottom: 1px;
+    }
+}
+
+@media (min-width: 768px) {
+    #user-score .score{
+        margin-top: 0;
+    } 
+}
+
+/* For laptop and desktop screens */
+@media (min-width: 1024px) {
+    .scoreboard {
+        max-width: 60vw;
+    }
+    .scorecard-title {
+        font-size: 1.5em;
+    }
+    .message {
+        font-size: 2em;
+    }
+}
+
+
+
