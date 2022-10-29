@@ -1,14 +1,6 @@
-import Card from "./Card";
+import Card from './Card';
 
 export default function Player({ handData }) {
-    console.log("hand", handData)
-    const hand = handData.map((card) => {
-        return (
-            <Card cardCode={card} />
-        )
-    })
-    return (<>
-        {hand}
-    </>
-    )
+  const currentCard = handData[0];
+  return <Card cardCode={currentCard} />;
 }

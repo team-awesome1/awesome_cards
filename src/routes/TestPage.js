@@ -1,9 +1,9 @@
 function TestPage() {
   return (
     <div className='TestPage'>
-      <section class='hero is-link is-fullheight-with-navbar'>
-        <div class='hero-body'>
-          <p class='title'>Fullheight hero with navbar</p>
+      <section className='hero is-link is-fullheight-with-navbar'>
+        <div className='hero-body'>
+          <p className='title'>Fullheight hero with navbar</p>
         </div>
       </section>
     </div>

@@ -1,0 +1,33 @@
+.cardArea-wrapper {
+  .hero {
+    // background-image: url('https://i.pinimg.com/474x/80/35/45/803545cbbc6c23fa0ea650422be36378.jpg');
+    // background-repeat: no-repeat;
+    border-radius: 9999px;
+    align-items: center;
+
+    .card_area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 80%;
+
+      @media screen and (min-width: 550px) {
+        max-width: 50%;
+      }
+
+      .container {
+        width: 30%;
+        padding: 0 !important;
+        margin: .25rem;
+
+        @media screen and (min-width: 550px) {
+          margin: 1rem;
+        }
+
+        h3 {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
