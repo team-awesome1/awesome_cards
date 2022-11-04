@@ -1,0 +1,53 @@
+@media (min-width: 280px) {
+    .ready-to-play {
+        font-size: 3em;
+    }
+    
+    .play-now {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 80vh;
+    }
+    
+    .game-btn {
+        color: rgb(54, 54, 54);
+        background-color: #fecb10;
+        border-radius: 5px;
+        padding: 8px 10px 3px 10px;
+        font-size: 1.5em;
+        border: none;
+        text-align: center;
+        font-family: 'Luckiest Guy', cursive;
+        box-shadow: 1vh 1vh .75vh rgba(0,0,0,.4);
+    }
+
+    .btn-box {
+        text-align: center;
+        margin: 2em;
+    }
+}
+
+@media (min-width: 768px) {
+    .ready-to-play {
+        font-size: 5em;
+    }
+    
+    .game-btn {
+        font-size: 2em;
+        padding: 8px 18px 3px 18px;
+        text-decoration: none;
+        transition: all .50s;
+    }
+
+    .game-btn:hover {
+        background-color: #ff7c9c;
+        font-size: 2.2em;
+        color: white; 
+    }
+}
+
+
+
