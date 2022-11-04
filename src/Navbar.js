@@ -6,14 +6,14 @@ import About from './routes/About';
 import PlayNow from './routes/PlayNow';
 import SignIn from './routes/SignIn';
 import Logo from './Logo';
-import './Navbar.css';
+import './styles/Navbar.css';
 
 
-const NavBar = () => { 
+const NavBar = () => {
     return (
         <nav className="navbar navbar-expand-lg" id="navbar">
             <div className="container-fluid">
-                <NavLink to="/" element={<Homepage />} id="logo" className="navbar-brand pt-3"  href="/"><Logo /></NavLink> 
+                <NavLink to="/" element={<Homepage />} id="logo" className="navbar-brand pt-3"  href="/"><Logo /></NavLink>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>

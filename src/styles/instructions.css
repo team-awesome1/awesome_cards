@@ -1,6 +1,6 @@
 @media (min-width: 280px) {
     body {
-        background-image: url("wallpaper.jpg");
+        background-image: url("../wallpaper.jpg");
         background-size: 200%;
     }
     h1 {
