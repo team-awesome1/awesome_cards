@@ -2,7 +2,7 @@ import Player from './Player';
 import './styles/CardArea.scss';
 
 export default function CardArea(props) {
-  const { hand1Data, hand2Data, gameInProgress } = props;
+  const { player1Card, player2Card, gameInProgress } = props;
 
   return (
     <div className='cardArea-wrapper'>
@@ -11,11 +11,11 @@ export default function CardArea(props) {
           <div className='card_area'>
             <div className='container'>
               <h3>Player 1 Hand</h3>
-              {hand1Data ? <Player handData={hand1Data} /> : <></>}
+              {player1Card ? <Player card={player1Card} /> : <></>}
             </div>
             <div className='container'>
               <h3>Player 2 Hand</h3>
-              {hand2Data ? <Player handData={hand2Data} /> : <></>}
+              {player2Card ? <Player card={player2Card} /> : <></>}
             </div>
           </div>
         </div>
