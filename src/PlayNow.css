@@ -17,7 +17,7 @@
         background-color: #fecb10;
         border-radius: 5px;
         padding: 8px 10px 3px 10px;
-        font-size: 1.5em;
+        font-size: 1em;
         border: none;
         text-align: center;
         font-family: 'Luckiest Guy', cursive;
@@ -26,7 +26,7 @@
 
     .btn-box {
         text-align: center;
-        margin: 2em;
+        margin: 1em;
     }
 }
 
@@ -36,7 +36,7 @@
     }
     
     .game-btn {
-        font-size: 2em;
+        font-size: 1.5em;
         padding: 8px 18px 3px 18px;
         text-decoration: none;
         transition: all .50s;
@@ -44,7 +44,7 @@
 
     .game-btn:hover {
         background-color: #ff7c9c;
-        font-size: 2.2em;
+        font-size: 1.7em;
         color: white; 
     }
 }

@@ -4,7 +4,7 @@ import "./Scorecard.css";
 
 const Scorecard = ({ title, score, msg, decoration1, decoration2, decoration3, background}) => {
     return (
-         <div className="scorecard w-100" style={{backgroundImage: `url(${background})`, backgroundSize: "cover"}}>
+         <div className="scorecard" style={{backgroundImage: `url(${background})`, backgroundSize: "cover"}}>
             <h3 className="scorecard-title">{title}</h3>            
                 <div>               
                     <div className="score">{score}</div>
