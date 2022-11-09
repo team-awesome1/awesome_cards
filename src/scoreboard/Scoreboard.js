@@ -16,7 +16,7 @@ const decoration = {
 
 const Scoreboard = ({ gameInProgress, player1Score, player2Score, totalCardsPlayer1, totalCardsPlayer2 }) => {
     
-    player1Score = 10;
+    player1Score = 0;
     player2Score = 0;
     let winningBattle;
 
