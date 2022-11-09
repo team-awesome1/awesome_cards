@@ -8,7 +8,6 @@ const Card = ({ cardCode }) => {
     // keep track of card face up or face down
     const [isShowing, setIsShowing] = useState(true);
 
-    console.log("cardCode:", cardCode)
     let valueCode = cardCode[0]
     let suitCode = cardCode[1]
     let suit;
@@ -20,8 +19,6 @@ const Card = ({ cardCode }) => {
         if (valueCode === "Q") {faceCard = "queen"};
         if (valueCode === "K") {faceCard = "king"};
     }
-    console.log("value", valueCode)
-    console.log("suit", suitCode)
     if (suitCode === "H" || suitCode === "D") {
 
         valueColor = "suit-heart-diamond";

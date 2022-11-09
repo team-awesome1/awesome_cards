@@ -11,9 +11,6 @@ export default function PlayNow() {
   const [player2Card, setPlayer2Card] = useState(null);
   const [winner, setWinner] = useState(null);
   const [gameStart, setGameStart] = useState(false);
-  // useEffect(() => {
-  //   setWinner(compareCards(player1Card, player2Card));
-  // }, [player1Card, player2Card]);
 
   const cardStrength = {
     "2": 1,
@@ -31,21 +28,11 @@ export default function PlayNow() {
     "A": 13
   }
 
-  // function startGame() {
-  //   const deck = new Deck();
-  //   deck.shuffle();
-  //   setHand1Data(deck.deal(26))
-  //   setHand2Data(deck.deal(26))
-  //   console.log("player1 hand", hand1Data)
-  //   console.log("player2 hand", hand2Data)
-  // }
   function startGame() {
     const deck = new Deck();
     deck.shuffle();
-    setHand1(deck.deal(26))
-    setHand2(deck.deal(26))
-    console.log("player1 hand", hand1)
-    console.log("player2 hand", hand2)
+    setHand1(deck.deal(26));
+    setHand2(deck.deal(26));
   }
 
   // dummy function for dealCards until we have the real one
@@ -73,8 +60,9 @@ export default function PlayNow() {
 
     // compare flipped cards to find winner
     console.log("player 1 and 2 cards:", player1Card, player2Card);
-    let bestCard = compareCards(card1, card2);
-    setWinner(bestCard);
+    if (player1Card !== null && player2Card !== null) {
+      setWinner(() => compareCards(card1, card2));
+    }
   }
 
   function compareCards(cardCode1, cardCode2) {
@@ -85,21 +73,15 @@ export default function PlayNow() {
 
     if (card1Value === card2Value) return "tie";
     if (card1Value > card2Value) {
+      // setHand1(hand1.filter((c, i) => i !== 0)[...hand1, player1Card, player2Card]);
+      setHand1(() => [...hand1, player1Card, player2Card]);
+      // cardsToWinner(hand1)
       return"player1";
     } else {
+      setHand2(() => [...hand2, player1Card, player2Card]);
       return "player2";
     }
   }
-
-  // const cardsToWinner = (winner=1) => {
-  //   if (player1Card !== null && player2Card !== null) {
-  //     if (winner === 1) {
-  //       setHand1(current => [...current, player1Card, player2Card])
-  //     } else {
-  //       setHand2(current => [...current, player1Card, player2Card])
-  //     }  
-  //   }
-  // }
 
   const showStatus = () => {
     console.log("hand1", hand1);
