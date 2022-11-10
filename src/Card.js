@@ -4,9 +4,9 @@ import './styles/Card.css';
 
 
 // const Card = ({ value, suit, faceUp }) => {
-const Card = ({ cardCode }) => {
+const Card = ({ cardCode, faceUp }) => {
     // keep track of card face up or face down
-    const [isShowing, setIsShowing] = useState(true);
+    // const [isShowing, setIsShowing] = useState(true);
 
     let valueCode = cardCode[0]
     let suitCode = cardCode[1]
@@ -15,6 +15,7 @@ const Card = ({ cardCode }) => {
     let faceCard;
 
     if (valueCode === "J" || valueCode === "Q" || valueCode === "K") {
+        console.log("card face up", faceUp);
         if (valueCode === "J") {faceCard = "jack"};
         if (valueCode === "Q") {faceCard = "queen"};
         if (valueCode === "K") {faceCard = "king"};
@@ -33,7 +34,7 @@ const Card = ({ cardCode }) => {
 
     return (
         <>
-        {isShowing ? (
+        {faceUp ? (
             <div>
                 <div className="card-wrapper">
                     <div className="card-background">

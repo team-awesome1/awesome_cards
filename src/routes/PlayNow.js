@@ -11,6 +11,7 @@ export default function PlayNow() {
   const [player2Card, setPlayer2Card] = useState(null);
   const [winner, setWinner] = useState(null);
   const [gameStart, setGameStart] = useState(false);
+  const [cardFaceUp, setCardFaceUp] = useState(false);
 
   const cardStrength = {
     "2": 1,
@@ -48,37 +49,58 @@ export default function PlayNow() {
   }
 
   function flipCard() {
-    // cardsToWinner()
+    if(cardFaceUp === false) {
+      setCardFaceUp(true);
+    }
     console.log("player1 hand", hand1)
     console.log("player2 hand", hand2)
-    let card1 = hand1[0];
-    let card2 = hand2[0];
-    setPlayer1Card(hand1.find((c, i) => i === 0));
-    setPlayer2Card(hand2.find((c, i) => i === 0));
+    setWinner(() => compareCards(hand1[0], hand2[0]));
     setHand1(hand1.filter((c, i) => i !== 0));
     setHand2(hand2.filter((c, i) => i !== 0));
-
-    // compare flipped cards to find winner
-    console.log("player 1 and 2 cards:", player1Card, player2Card);
-    if (player1Card !== null && player2Card !== null) {
-      setWinner(() => compareCards(card1, card2));
-    }
   }
+  // function flipCard() {
+  //   console.log("player1 hand", hand1)
+  //   console.log("player2 hand", hand2)
+  //   let card1 = hand1[0];
+  //   let card2 = hand2[0];
+  //   setPlayer1Card(hand1[0]);
+  //   setPlayer2Card(hand2[0]);
+  //   setHand1(hand1.filter((c, i) => i !== 0));
+  //   setHand2(hand2.filter((c, i) => i !== 0));
+  //   // compare flipped cards to find winner
+  //   console.log("player 1 and 2 cards:", player1Card, player2Card);
+  //   if (player1Card !== null && player2Card !== null) {
+  //     setWinner(() => compareCards(card1, card2));
+  //   }
+  // }
+
+  useEffect(() => {
+    console.log("player 1 and 2 cards (in useEffect):", player1Card, player2Card);
+    if (player1Card !== null && player2Card !== null) {
+      compareCards(player1Card, player2Card);
+    }
+    }, [player1Card, player2Card]);
 
   function compareCards(cardCode1, cardCode2) {
+    console.log("compareCards function running");
     let card1Num = cardCode1[0];
     let card2Num = cardCode2[0];
     let card1Value = cardStrength[card1Num];
     let card2Value = cardStrength[card2Num];
 
-    if (card1Value === card2Value) return "tie";
+    if (card1Value === card2Value) {
+      console.log("player1 and player2 have equal cards");
+      return "tie";
+    }
     if (card1Value > card2Value) {
       // setHand1(hand1.filter((c, i) => i !== 0)[...hand1, player1Card, player2Card]);
       setHand1(() => [...hand1, player1Card, player2Card]);
+      console.log("player1 has higher card");
       // cardsToWinner(hand1)
       return"player1";
     } else {
       setHand2(() => [...hand2, player1Card, player2Card]);
+      console.log("player2 has higher card");
       return "player2";
     }
   }
@@ -89,6 +111,7 @@ export default function PlayNow() {
     console.log("player1Card", player1Card);
     console.log("player2Card", player2Card);
     console.log("winner", winner);
+    console.log("cardFaceUp", cardFaceUp);
   }
 
   return (
@@ -104,8 +127,12 @@ export default function PlayNow() {
       <div className="card-area">        
         <CardArea
           gameInProgress={gameStart}
-          player1Card={player1Card}
-          player2Card={player2Card}
+          player1Card={hand1[0]}
+          player2Card={hand2[0]}
+          card1FaceUp={cardFaceUp}
+          card2FaceUp={cardFaceUp}
+          // player1Card={player1Card}
+          // player2Card={player2Card}
         />
         <div className="btn-box">
           <button className="game-btn" onClick={dealCards}>Deal cards</button> 
