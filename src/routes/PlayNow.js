@@ -52,11 +52,8 @@ export default function PlayNow() {
     if(cardFaceUp === false) {
       setCardFaceUp(true);
     }
-    console.log("player1 hand", hand1)
-    console.log("player2 hand", hand2)
     setWinner(() => compareCards(hand1[0], hand2[0]));
-    setHand1(hand1.filter((c, i) => i !== 0));
-    setHand2(hand2.filter((c, i) => i !== 0));
+
   }
   // function flipCard() {
   //   console.log("player1 hand", hand1)
@@ -75,11 +72,10 @@ export default function PlayNow() {
   // }
 
   useEffect(() => {
-    console.log("player 1 and 2 cards (in useEffect):", player1Card, player2Card);
-    if (player1Card !== null && player2Card !== null) {
-      compareCards(player1Card, player2Card);
-    }
-    }, [player1Card, player2Card]);
+    console.log("USE EFFECT:");
+    console.log("hand 1", hand1);
+    console.log("hand 2", hand2);
+    }, [hand1, hand2]);
 
   function compareCards(cardCode1, cardCode2) {
     console.log("compareCards function running");
@@ -88,21 +84,34 @@ export default function PlayNow() {
     let card1Value = cardStrength[card1Num];
     let card2Value = cardStrength[card2Num];
 
-    if (card1Value === card2Value) {
-      console.log("player1 and player2 have equal cards");
-      return "tie";
-    }
+    let c1 = hand1[0];
+    let c2 = hand2[0];
+    let h1 = hand1.filter((c, i) => i !== 0);
+    let h2 = hand2.filter((c, i) => i !== 0);
+    let win;
+    // setHand1(hand1.filter((c, i) => i !== 0));
+    // setHand2(hand2.filter((c, i) => i !== 0));
+
     if (card1Value > card2Value) {
       // setHand1(hand1.filter((c, i) => i !== 0)[...hand1, player1Card, player2Card]);
-      setHand1(() => [...hand1, player1Card, player2Card]);
+      // h1 = [...h1, c1, c2];
+      h1.push(c1, c2);
       console.log("player1 has higher card");
       // cardsToWinner(hand1)
-      return"player1";
-    } else {
-      setHand2(() => [...hand2, player1Card, player2Card]);
-      console.log("player2 has higher card");
-      return "player2";
+      win = "player1";
     }
+    if (card1Value < card2Value) {
+      // h2 = [...hand2, c1, c2];
+      h2.push(c1, c2);
+      console.log("player2 has higher card");
+      win = "player2";
+    } else {
+      console.log("player1 and player2 have equal cards");
+      win = "tie";
+    }
+    setHand1(h1);
+    setHand2(h2);
+    return win;
   }
 
   const showStatus = () => {
