@@ -51,8 +51,11 @@ export default function PlayNow() {
   function flipCard() {
     if(cardFaceUp === false) {
       setCardFaceUp(true);
+      
     }
-    setWinner(() => compareCards(hand1[0], hand2[0]));
+
+    compareCards();
+    // setWinner(() => compareCards(hand1[0], hand2[0]));
 
   }
   // function flipCard() {
@@ -75,32 +78,34 @@ export default function PlayNow() {
     console.log("USE EFFECT:");
     console.log("hand 1", hand1);
     console.log("hand 2", hand2);
-    }, [hand1, hand2]);
+    console.log("winner", winner);
+    }, [hand1, hand2, winner]);
 
-  function compareCards(cardCode1, cardCode2) {
+  function compareCards() {
     console.log("compareCards function running");
-    let card1Num = cardCode1[0];
-    let card2Num = cardCode2[0];
-    let card1Value = cardStrength[card1Num];
-    let card2Value = cardStrength[card2Num];
-
     let c1 = hand1[0];
     let c2 = hand2[0];
+
+    let card1ValCode = c1[0];
+    let card2ValCode = c2[0];
+    let card1Strength = cardStrength[card1ValCode];
+    let card2Strength = cardStrength[card2ValCode];
+
+
     let h1 = hand1.filter((c, i) => i !== 0);
     let h2 = hand2.filter((c, i) => i !== 0);
     let win;
     // setHand1(hand1.filter((c, i) => i !== 0));
     // setHand2(hand2.filter((c, i) => i !== 0));
 
-    if (card1Value > card2Value) {
+    if (card1Strength > card2Strength) {
       // setHand1(hand1.filter((c, i) => i !== 0)[...hand1, player1Card, player2Card]);
       // h1 = [...h1, c1, c2];
       h1.push(c1, c2);
       console.log("player1 has higher card");
       // cardsToWinner(hand1)
       win = "player1";
-    }
-    if (card1Value < card2Value) {
+    } else if (card1Strength < card2Strength) {
       // h2 = [...hand2, c1, c2];
       h2.push(c1, c2);
       console.log("player2 has higher card");
@@ -111,14 +116,12 @@ export default function PlayNow() {
     }
     setHand1(h1);
     setHand2(h2);
-    return win;
+    setWinner(win)
   }
 
   const showStatus = () => {
     console.log("hand1", hand1);
     console.log("hand2", hand2);
-    console.log("player1Card", player1Card);
-    console.log("player2Card", player2Card);
     console.log("winner", winner);
     console.log("cardFaceUp", cardFaceUp);
   }
