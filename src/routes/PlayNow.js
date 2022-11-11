@@ -14,19 +14,19 @@ export default function PlayNow() {
   const [cardFaceUp, setCardFaceUp] = useState(false);
 
   const cardStrength = {
-    "2": 1,
-    "3": 2,
-    "4": 3,
-    "5": 4,
-    "6": 5,
-    "7": 6,
-    "8": 7,
-    "9": 8,
-    "0": 9,
-    "J": 10,
-    "Q": 11,
-    "K": 12,
-    "A": 13
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "0": 10,
+    "J": 11,
+    "Q": 12,
+    "K": 13,
+    "A": 14
   }
 
   function startGame() {
@@ -48,38 +48,26 @@ export default function PlayNow() {
     flipCard();
   }
 
+  function start() {
+    setCardFaceUp(true);
+  }
+
   function flipCard() {
+    console.log("STARTING (flip)", "winner", winner, "hand 1", hand1, "hadn 2", hand2);
+
+    // first flip of game
     if(cardFaceUp === false) {
       setCardFaceUp(true);
-      
+    }
+    // every time after first flip
+    else {
+      compareCards();
+      moveCards();
     }
 
-    compareCards();
-    // setWinner(() => compareCards(hand1[0], hand2[0]));
-
+    console.log("ENDING (flip)", "winner", winner, "hand 1", hand1, "hadn 2", hand2);
   }
-  // function flipCard() {
-  //   console.log("player1 hand", hand1)
-  //   console.log("player2 hand", hand2)
-  //   let card1 = hand1[0];
-  //   let card2 = hand2[0];
-  //   setPlayer1Card(hand1[0]);
-  //   setPlayer2Card(hand2[0]);
-  //   setHand1(hand1.filter((c, i) => i !== 0));
-  //   setHand2(hand2.filter((c, i) => i !== 0));
-  //   // compare flipped cards to find winner
-  //   console.log("player 1 and 2 cards:", player1Card, player2Card);
-  //   if (player1Card !== null && player2Card !== null) {
-  //     setWinner(() => compareCards(card1, card2));
-  //   }
-  // }
 
-  useEffect(() => {
-    console.log("USE EFFECT:");
-    console.log("hand 1", hand1);
-    console.log("hand 2", hand2);
-    console.log("winner", winner);
-    }, [hand1, hand2, winner]);
 
   function compareCards() {
     console.log("compareCards function running");
@@ -91,37 +79,51 @@ export default function PlayNow() {
     let card1Strength = cardStrength[card1ValCode];
     let card2Strength = cardStrength[card2ValCode];
 
-
-    let h1 = hand1.filter((c, i) => i !== 0);
-    let h2 = hand2.filter((c, i) => i !== 0);
+    setPlayer1Card(card1Strength);
+    setPlayer2Card(card2Strength);
     let win;
-    // setHand1(hand1.filter((c, i) => i !== 0));
-    // setHand2(hand2.filter((c, i) => i !== 0));
 
+    console.log("cardValCodes", card1ValCode, card2ValCode);
     if (card1Strength > card2Strength) {
-      // setHand1(hand1.filter((c, i) => i !== 0)[...hand1, player1Card, player2Card]);
-      // h1 = [...h1, c1, c2];
-      h1.push(c1, c2);
       console.log("player1 has higher card");
-      // cardsToWinner(hand1)
       win = "player1";
     } else if (card1Strength < card2Strength) {
-      // h2 = [...hand2, c1, c2];
-      h2.push(c1, c2);
       console.log("player2 has higher card");
       win = "player2";
     } else {
       console.log("player1 and player2 have equal cards");
       win = "tie";
     }
-    setHand1(h1);
-    setHand2(h2);
+
     setWinner(win)
   }
 
+  function moveCards() {
+    let c1 = hand1[0];
+    let c2 = hand2[0];
+    let h1 = hand1.filter((c, i) => i !== 0);
+    let h2 = hand2.filter((c, i) => i !== 0);
+    if (winner === "player1") {
+      h1.push(c1, c2);
+    }
+    if (winner === "player2") {
+      h2.push(c1, c2);
+    }
+    setHand1(h1);
+    setHand2(h2);
+  }
+  
+  useEffect(() => {
+    console.log("USE EFFECT:");
+    console.log("hand 1", hand1);
+    console.log("hand 2", hand2);
+    console.log("winner", winner);
+    console.log("cardFaceUp", cardFaceUp);
+    }, [hand1, hand2, winner, cardFaceUp]);
+
   const showStatus = () => {
-    console.log("hand1", hand1);
-    console.log("hand2", hand2);
+    // console.log("hand1", hand1);
+    // console.log("hand2", hand2);
     console.log("winner", winner);
     console.log("cardFaceUp", cardFaceUp);
   }
@@ -147,12 +149,16 @@ export default function PlayNow() {
           // player2Card={player2Card}
         />
         <div className="btn-box">
-          <button className="game-btn" onClick={dealCards}>Deal cards</button> 
-          <button className="game-btn" onClick={flipCard}>Flip Card</button> 
-          <button className="game-btn" onClick={showStatus}>Status</button> 
+          <button className="game-btn" onClick={start}>Start</button> 
+          <button className="game-btn" onClick={compareCards}>Compare Cards</button> 
+          <button className="game-btn" onClick={moveCards}>Move Cards</button> 
+          {/* <button className="game-btn" onClick={flipCard}>Play Card</button> 
+          <button className="game-btn" onClick={showStatus}>Status</button>  */}
         </div>      
         <Scoreboard
-          gameInProgress={gameStart} />
+          gameInProgress={gameStart}
+          player1Score={player1Card}
+          player2Score={player2Card} />
       </div>}
     </>
   );

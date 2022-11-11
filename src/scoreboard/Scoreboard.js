@@ -16,8 +16,8 @@ const decoration = {
 
 const Scoreboard = ({ gameInProgress, player1Score, player2Score }) => {
     
-    player1Score = 0;
-    player2Score = 0;
+    // player1Score = 0;
+    // player2Score = 0;
     let winning;
 
     player1Score > player2Score ? winning = true : winning = false;
