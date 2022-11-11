@@ -1,11 +1,25 @@
 /* for small mobile devices */
 @media (min-width: 280px) {
 
+    .scores-heading {
+        text-align: center;
+        padding-top: 5px;
+        color: #FBA779;
+        -webkit-text-stroke-width:.1vw;
+        -webkit-text-stroke-color: gray;
+        text-shadow: 0.5vh 0.5vh 0.5vh rgb(0 0 0 / 40%);
+    }
+
+    .scoreboard-frame {
+        max-height: 260px;
+    }
+
     .scoreboard {
+        background-color: #B3B7DC;
         font-family: "Luckiest Guy";
         border-radius: 10px;
         padding: 0px;
-        max-width: 95vw;
+        max-width: 90%;      
     }
     
     .scorecard {
@@ -15,24 +29,22 @@
         padding-bottom: 1em;
         position: relative;
         background-color: transparent;
-        margin-top: .6em;
-        margin-bottom: .6em;
-        border-radius: 5px;
+        border-radius: 10px;
     }
     
     .scorecard-frame {
         background-color: #B7D6EB;
-        margin: 10px;
+        margin: 5px 20px;
         border-radius: 10px;
         text-align: center;
-        min-width: 5em;
         position: relative;
+        padding: 0;
     }
     
     .score {
         text-align: center;
         color: #FBA779;
-        font-size: 4em;
+        font-size: 3em;
     }
     
     .scorecard-title {
@@ -40,6 +52,7 @@
         color: #fecb10;
         -webkit-text-stroke-width:.1vw;
         -webkit-text-stroke-color: gray ;
+        text-shadow: none;
     }
 
     .message {
@@ -51,30 +64,68 @@
 
     @keyframes grow {
         from {font-size: .1em;}
-        to {font-size: 2.3em;}
+        to {font-size: 1.2em;}
       }
 
-    .decoration {        
-        font-size: 2.3em;
-        animation-name: grow;
-        animation-duration: 3s;        
+    .decoration {   
+        display: none;             
     }
 
     #user-score .score{
         margin-top: .3em;
     }
+
+    .war-scores {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 1.2em;
+        color: #fecb10;
+        -webkit-text-stroke-width:.1vw;
+        -webkit-text-stroke-color: gray ;
+    }
+
+    .war-score {
+        font-family: "Luckiest Guy";
+    }
 }
 
 /* For large mobile devices and tablets */
 @media (min-width: 540px) {
+    .scoreboard-frame  {
+        max-height: 340px;
+    }
+
     .scoreboard {
         background-color: #B3B7DC;
         padding: 10px 20px;
-        max-width: 70vw;
+        max-width: 600px;
     }
-    
+
     .scorecard {
         padding-bottom: 1px;
+    }
+    
+    .scorecard-title {
+        font-size: 1.5em;
+    }
+
+    .score {
+        font-size: 4em;
+    }
+
+    .decoration {   
+        display: block;     
+        font-size: 2.5em;
+        animation-name: grow;
+        animation-duration: 3s;        
+    }
+    .message {
+        font-size: 2em;
+    }
+
+    .war-score {
+        font-size: 1.2em;
     }
 }
 
@@ -86,14 +137,20 @@
 
 /* For laptop and desktop screens */
 @media (min-width: 1024px) {
-    .scoreboard {
-        max-width: 60vw;
+    .scoreboard.container {
+        width: 800px;
     }
     .scorecard-title {
         font-size: 1.5em;
     }
     .message {
         font-size: 2em;
+    }
+    .scores-heading {
+        font-size: 2em;
+    }
+    .war-score {
+        font-size: 1.4em;
     }
 }
 
